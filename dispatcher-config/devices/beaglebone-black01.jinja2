@@ -1,0 +1,6 @@
+{% extends 'beaglebone-black.jinja2' %}
+{% set bootloader_prompt = '=>' %}
+{% set connection_command = 'telnet localhost 6011' %}
+{% set power_off_command = "pduclient --daemon debian9-lava03 --hostname yp-lava-pdu01 --command off --port 05" %}
+{% set power_on_command = "pduclient --daemon debian9-lava03 --hostname yp-lava-pdu01 --command on --port 05" %}
+{% set hard_reset_command = "pduclient --daemon debian9-lava03 --hostname yp-lava-pdu01 --command reboot --port 05" %}

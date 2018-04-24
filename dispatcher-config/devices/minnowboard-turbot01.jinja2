@@ -1,0 +1,7 @@
+{% extends 'minnowboard.jinja2' %}
+{% set connection_command = 'telnet localhost 6011' %}
+{% set console_device = "/dev/ttyS0" %}
+{% set usb_uuid = 'usb-SanDisk_Ultra_4C530001320810100081-0' %}
+{% set power_off_command = "pduclient --daemon debian9-lava03 --hostname yp-lava-pdu01 --command off --port 12" %}
+{% set power_on_command = "pduclient --daemon debian9-lava03 --hostname yp-lava-pdu01 --command on --port 12" %}
+{% set hard_reset_command = "pduclient --daemon debian9-lava03 --hostname yp-lava-pdu01 --command reboot --port 12" %}
